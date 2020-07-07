@@ -1,0 +1,28 @@
+{
+  "pokupki": [
+    {
+      "name": "Лапша",
+      "amount": 213,
+      "status": false,
+      "id": 1
+    },
+    {
+      "name": "Помидоры",
+      "amount": 87,
+      "status": true,
+      "id": 2
+    },
+    {
+      "name": "Яблоки",
+      "amount": 111,
+      "status": false,
+      "id": 3
+    },
+    {
+      "name": "Персики",
+      "amount": 76,
+      "status": true,
+      "id": 4
+    }
+  ]
+}

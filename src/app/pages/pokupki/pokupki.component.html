@@ -1,0 +1,10 @@
+<div class="container mt-1 mb-5">
+    <div class="row mb-3">
+        <div class="col-12">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+
+    <app-add (addItem)="onAddItem($event)"></app-add>
+    <app-table [pokupki]="pokupki" (changeItem)="onChangeItem($event)" (deleteItem)="onDeleteItem($event)"></app-table>
+</div>

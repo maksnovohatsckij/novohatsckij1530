@@ -1,0 +1,43 @@
+<ng-container *ngIf="pokupki.length > 0; else noData">
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" [style.width]="'5%'">№</th>
+                        <th scope="col" [style.width]="'20%'">Название</th>
+                        <th scope="col" [style.width]="'10%'">Кол-во</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col" [style.width]="'220px'"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pokupka of pokupki" [ngClass]="{'unsold': pokupka.status==false}">
+                        <th class="align-middle" scope="row">{{ pokupka.id }}</th>
+                        <td class="align-middle">{{ pokupka.name }}</td>
+                        <td class="align-middle">{{ pokupka.amount }}</td>
+                        <td class="align-middle"><button class="btn btn-outline-dark btn-sm"
+                                (click)="toggleItem(pokupka)">
+                                {{ pokupka.status }}
+                            </button></td>
+                        <td class="align-middle">
+                            <div class="row pr-2">
+                                <div class="col-lg-5 p-1">
+                                    <button class="btn btn-block btn-outline-danger btn-sm" (click)="onDelete(pokupka)">
+                                        Удалить
+                                    </button>
+                                </div>
+                                <div class="col-lg-7 p-1">
+                                    <app-change (changeItem)="onChangeItem($event)" [pokupka]="pokupka"></app-change>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
+<ng-template #noData>
+    <h5>No data...</h5>
+</ng-template>

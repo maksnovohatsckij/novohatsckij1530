@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="onAddItem()" class="col px-0 mb-3">
+
+    <div class="row">
+        <h3 class="col">Добавить сотрудника</h3>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <input formControlName="name" type="text" class="form-control" placeholder="Название"
+                [ngClass]="{'is-invalid': form.get('name').touched && form.get('name').invalid}" />
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <input formControlName="amount" type="number" class="form-control" placeholder="Кол-во"
+                [ngClass]="{'is-invalid': form.get('amount').touched && form.get('amount').invalid}" />
+        </div>
+
+        
+    </div>
+
+    <div class="row mt-1">
+        <div class="col mt-1 pt-1">
+            <button type="submit" class="btn btn-outline-primary btn-sm" [disabled]="!form.valid">
+                Добавить
+            </button>
+        </div>
+    </div>
+
+</form>
