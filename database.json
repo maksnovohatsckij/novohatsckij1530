@@ -1,10 +1,10 @@
 {
   "pokupki": [
     {
-      "name": "Лапша",
-      "amount": 213,
-      "status": false,
-      "id": 1
+      "id": 1,
+      "name": "Лапша из муки",
+      "amount": 555,
+      "status": false
     },
     {
       "name": "Помидоры",

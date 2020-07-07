@@ -18,7 +18,7 @@
                         <td class="align-middle">{{ pokupka.amount }}</td>
                         <td class="align-middle"><button class="btn btn-outline-dark btn-sm"
                                 (click)="toggleItem(pokupka)">
-                                {{ pokupka.status }}
+                                {{ pokupka.status?"куплен":"не куплен" }}
                             </button></td>
                         <td class="align-middle">
                             <div class="row pr-2">
