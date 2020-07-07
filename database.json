@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Лапша из муки",
-      "amount": 555,
+      "amount": 5555,
       "status": false
     },
     {
@@ -33,7 +33,7 @@
     {
       "name": "Капуста",
       "amount": 5,
-      "status": false,
+      "status": true,
       "id": 6
     }
   ]
