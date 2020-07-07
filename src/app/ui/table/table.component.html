@@ -12,7 +12,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let pokupka of pokupki" [ngClass]="{'unsold': pokupka.status==false}">
+                    <tr *ngFor="let pokupka of pokupkiSorted" [ngClass]="{'unsold': pokupka.status==false}">
                         <th class="align-middle" scope="row">{{ pokupka.id }}</th>
                         <td class="align-middle">{{ pokupka.name }}</td>
                         <td class="align-middle">{{ pokupka.amount }}</td>

@@ -11,28 +11,29 @@ export class TableComponent implements OnInit {
   private _pokupki: Pokupka[] = [];
   @Input()
   set pokupki(pokupkaArr: Pokupka[]) {
-    this._pokupki = this.sort(pokupkaArr);
+    this._pokupki = pokupkaArr;
+    this.sort();
   }
   get pokupki() {
     return this._pokupki;
   };
-
+  pokupkiSorted : Pokupka[] = [];
   @Output() deleteItem = new EventEmitter<Pokupka>();
   @Output() changeItem = new EventEmitter<Pokupka>();
 
 
   constructor() { }
 
-  sort(pokupkaArr: Pokupka[]): Pokupka[] {
-    pokupkaArr.sort((p1: Pokupka, p2: Pokupka) => {
+  sort() {
+    this.pokupkiSorted = this.pokupki.slice();
+    this.pokupkiSorted.sort((p1: Pokupka, p2: Pokupka) => {
       let [a, b] = [p1.name, p2.name];
       return a > b ? 1 : a < b ? -1 : 0;
     });
-    pokupkaArr.sort((p1: Pokupka, p2: Pokupka) => {
+    this.pokupkiSorted.sort((p1: Pokupka, p2: Pokupka) => {
       let [a, b] = [p1.status, p2.status];
       return a > b ? 1 : a < b ? -1 : 0;
     });
-    return pokupkaArr;
   }
 
   ngOnInit(): void { }

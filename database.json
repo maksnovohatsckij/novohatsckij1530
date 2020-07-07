@@ -9,7 +9,7 @@
     {
       "name": "Помидоры",
       "amount": 87,
-      "status": true,
+      "status": false,
       "id": 2
     },
     {
@@ -23,6 +23,18 @@
       "amount": 76,
       "status": true,
       "id": 4
+    },
+    {
+      "name": "Черешня",
+      "amount": 888888,
+      "status": false,
+      "id": 5
+    },
+    {
+      "name": "Капуста",
+      "amount": 5,
+      "status": false,
+      "id": 6
     }
   ]
 }

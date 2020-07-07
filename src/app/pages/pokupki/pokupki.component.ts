@@ -37,6 +37,7 @@ export class PokupkiComponent implements OnInit {
   }
 
   async onAddItem(pokupka: Pokupka) {
+    console.log(this.pokupki);
     try {
       pokupka.id = this.pokupki.length > 0
         ? this.pokupki[this.pokupki.length - 1].id + 1
